@@ -1,0 +1,211 @@
+/*body, li, a, input, select{
+  background-color: #F0F0F0 !important;
+}
+
+h1 {
+  background-color: #D8D8D8;
+}
+
+h2 {
+  background-color: #E8E8E8;
+}
+*/
+body {
+  background: none repeat scroll 0 0 #ffffff;
+  
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  
+}
+#g2008_1emodisdata1-dekad
+{
+width: 100%;
+height: 220px;
+}
+#g2008_2emodisdata1-dekad
+{
+width: 100%;
+height: 220px;
+}
+#cropzonesemodisdata1-dekad
+{
+width: 100%;
+height: 220px;
+}
+#g2008_1emodisanomaly1-dekad
+{
+width: 100%;
+height: 220px;
+}
+#g2008_2emodisanomaly1-dekad
+{
+width: 100%;
+height: 220px;
+}
+#cropzonesemodisanomaly1-dekad
+{
+width: 100%;
+height: 220px;
+}
+#g2008_1rfe1-dekad
+{
+width: 100%;
+height: 220px;
+}
+#g2008_2rfe1-month
+{
+width: 100%;
+height: 220px;
+}
+#g2008_1rfecropzones{
+width: 100%;
+height: 220px;
+}
+/*#g2008_1rfe1-month
+{
+width: 100%;
+height: 220px;
+}
+#g2008_2rfe1-month
+{
+width: 100%;
+height: 220px;
+}
+#g2008_1rfecropzones{
+width: 100%;
+height: 220px;
+}*/
+
+#cropzonesrfe1-month
+{
+width: 100%;
+height: 220px;
+}
+#g2008_1cumrfe{
+width: 100%;
+height: 220px;
+}
+#g2008_1emodis{
+width: 100%;
+height: 220px;
+}
+#g2008_2rfe{
+width: 100%;
+height: 220px;
+}
+#g2008_2cumrfe{
+width: 100%;
+height: 220px;
+}
+#g2008_2emodis{
+width: 100%;
+height: 220px;
+}
+#cropzonesrfe{
+width: 100%;
+height: 220px;
+}
+#cropzonescumrfe{
+width: 100%;
+height: 220px;
+}
+#cropzonesemodis{
+width: 100%;
+height: 220px;
+}
+.chart {
+    width: 400px;
+	height: 200px;
+    margin: 0 auto;
+	display: block;
+	overflow: hidden;
+  position: relative;
+}
+.chartdimension
+{
+
+   /*padding-bottom: 20%;  the higher the bigger the ratio */
+   width: 400px; height: 200px;
+   
+}
+.chartdimension > div {
+      
+ min-height: 250px;max-height: 100px;
+ }
+ul#chart-legend
+{
+list-style-type: none;
+}
+ul#chartlegend> li 
+{
+list-style-type: none;
+display: inline-block; line-height: 10px; margin-right: 1.5em; float: left;
+}
+ul#chart-legend > li > div.line-color {
+  padding-left: 20px;
+  width: 20px;
+  height: 4px;
+  float: left;
+  margin: 4px 3px 0 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.ol-viewport, div.chart, div.amcharts-chart-div, div.amcharts-chart-div > svg {
+  overflow: visible !important;
+}
+
+div.error {
+  background-color: red;
+  color: white;
+  padding: 0 10px;
+}
+
+.chart-title {
+  display: inline-block;
+  margin-right: 2em;
+}
+
+
+span.glyphicon-zoom-in {
+  border: 0 solid white;
+  border-radius: 22px;
+  box-shadow: 1px 1px 1px #C0C0C0;
+  padding: 11px;
+  color: #B0B0B0;
+  position: absolute;
+  right: 40px;
+  top: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  cursor: hand;
+}
+.amExportButton {
+  top: -10px;
+  right: 0;
+}
+.amcharts-export-menu .export-main > a, .amcharts-export-menu .export-drawing > a
+{
+width: 24px;
+  height: 24px;
+}
+ .amcharts-axis-tick.dont-show, .amcharts-axis-label.dont-show {
+ display: none;
+}
+@media screen and (max-width: 500px) {
+
+
+hr.body-separator {
+  border-color: #C0C0C0;
+  clear: both;
+}
+
+/*.amExportButton {
+  top: -50px;
+  right: 60px;
+}*/
+
+

@@ -1,0 +1,313 @@
+{
+	"charts": [
+	{
+		"source": {
+			"url": "proxies/testProxy.php?url=http://data.rcmrd.org:8910/rest/timeseries/version/3.0/vector_dataset/{{vector_dataset}}/raster_dataset/{{raster_dataset}}/region/africa/periodicity/{{periodicity}}/statistic/{{statistic}}/lat/{{lat}}/lon/{{lon}}/seasons/{{seasons}}/calculation_type/mean/mean-median/true",
+			"type": "json"
+		},
+		"overlays": [
+		"chirpsprelimAfricaData1Dekad",
+		"chirpsprelimAfricaAnomaly1Dekad",
+		"chirpsprelimAfricaZscore1Dekad"
+		],
+		"boundaries": ["africaAdmin1",
+		"africaAdmin2",
+		"africaCropzones","kenyaAdmin3", "kenyaNRTConse","kenyaNRTGB","kenyaKRGB","tanzaniaAdmin3"],
+		
+		"boundary_labels": ["Admin 1",
+		"Admin 2",
+		"Crop Zones","Kenya Admin 3","Kenya NRT Conservancies","Kenya NRT Grazing Blocks","Kenya Rapid Grazing Blocks","Tanzania Admin 3"],
+		
+		"geoengine_boundary_names": ["africa:g2008_1",
+		"africa:g2008_2",
+		"africa:cropzones", "africa:kenya_3","africa:kenya_NRT_conse","africa:kenya_NRT_gb","africa:kenya_KR_gb","africa:tanzania_3"],
+		
+		"chart_types": [{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "annual",
+			"data_root": "chirpsprelim.time_series.values",
+			"y_axis_range": "auto"
+		},
+		{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "interannual",
+			"data_root": "chirpsprelim.time_series.values",
+			"y_axis_range": "auto"
+		},
+		{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "annual_cumulative",
+			"data_root": "chirpsprelim.time_series.values",
+			"y_axis_range": "auto"
+		}]
+	},
+	{
+		"source": {
+			"url": "proxies/testProxy.php?url=http://data.rcmrd.org:8910/rest/timeseries/version/3.0/vector_dataset/{{vector_dataset}}/raster_dataset/{{raster_dataset}}/region/africa/periodicity/{{periodicity}}/statistic/{{statistic}}/lat/{{lat}}/lon/{{lon}}/seasons/{{seasons}}/calculation_type/mean/mean-median/true",
+			"type": "json"
+		},
+		"overlays": [
+		"chirpsAfricaData1Dekad",
+		"chirpsAfricaAnomaly1Dekad",
+		"chirpsAfricaZscore1Dekad",
+		"chirpsAfricaData1Monthly",
+		"chirpsAfricaData2Monthly",
+		"chirpsAfricaData3Monthly",
+		"chirpsAfricaAnomaly1Monthly",
+		"chirpsAfricaAnomaly2Monthly",
+		"chirpsAfricaAnomaly3Monthly",
+		"chirpsAfricaZscore1Monthly",
+		"chirpsAfricaZscore2Monthly",
+		"chirpsAfricaZscore3Monthly"],
+		
+		"boundaries": ["africaAdmin1",
+		"africaAdmin2",
+		"africaCropzones","kenyaAdmin3", "kenyaNRTConse","kenyaNRTGB","kenyaKRGB","tanzaniaAdmin3"],
+		
+		"boundary_labels": ["Admin 1",
+		"Admin 2",
+		"Crop Zones","Kenya Admin 3","Kenya NRT Conservancies","Kenya NRT Grazing Blocks","Kenya Rapid Grazing Blocks","Tanzania Admin 3"],
+		
+		"geoengine_boundary_names": ["africa:g2008_1",
+		"africa:g2008_2",
+		"africa:cropzones", "africa:kenya_3","africa:kenya_NRT_conse","africa:kenya_NRT_gb","africa:kenya_KR_gb","africa:tanzania_3"],
+		
+		"chart_types": [{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "annual",
+			"data_root": "chirps.time_series.values",
+			"y_axis_range": "auto"
+		},
+		{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "interannual",
+			"data_root": "chirps.time_series.values",
+			"y_axis_range": "auto"
+		},
+		{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "annual_cumulative",
+			"data_root": "chirps.time_series.values",
+			"y_axis_range": "auto"
+		}]
+	},
+	{
+		"source": {
+			"url": "proxies/testProxy.php?url=http://data.rcmrd.org:8910/rest/timeseries/version/3.0/vector_dataset/{{vector_dataset}}/raster_dataset/{{raster_dataset}}/region/africa/periodicity/{{periodicity}}/statistic/{{statistic}}/lat/{{lat}}/lon/{{lon}}/seasons/{{seasons}}/calculation_type/mean",
+			"type": "json"
+		},
+		"overlays": ["chirtsmaxAfricaData1Monthly",
+		"chirtsmaxAfricaAnomaly1Monthly",
+		"chirtsmaxAfricaZscore1Monthly"],
+		
+		"boundaries": ["africaAdmin1",
+		"africaAdmin2",
+		"africaCropzones","kenyaAdmin3", "kenyaNRTConse","kenyaNRTGB","kenyaKRGB","tanzaniaAdmin3"],
+		
+		"boundaries": ["africaAdmin1",
+		"africaAdmin2",
+		"africaCropzones","kenyaAdmin3", "kenyaNRTConse","kenyaNRTGB","kenyaKRGB","tanzaniaAdmin3"],
+		
+		"boundary_labels": ["Admin 1",
+		"Admin 2",
+		"Crop Zones","Kenya Admin 3", "Kenya NRT Conservancies","Kenya NRT Grazing Blocks","Kenya Rapid Grazing Blocks","Tanzania Admin 3"],
+		
+		"geoengine_boundary_names": ["africa:g2008_1",
+		"africa:g2008_2",
+		"africa:cropzones","africa:kenya_3","africa:kenya_NRT_conse","africa:kenya_NRT_gb","africa:kenya_KR_gb","africa:tanzania_3"],
+		
+		"chart_types": [{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "annual",
+			"data_root": "chirtsmax.time_series.values",
+			"y_axis_range": "auto"
+		},
+		{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "interannual",
+			"data_root": "chirtsmax.time_series.values",
+			"y_axis_range": "auto"
+		},
+		{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "annual_cumulative",
+			"data_root": "chirtsmax.time_series.values",
+			"y_axis_range": "auto"
+		}]
+	},{
+		"source": {
+			"url": "proxies/testProxy.php?url=http://data.rcmrd.org:8910/rest/timeseries/version/3.0/vector_dataset/{{vector_dataset}}/raster_dataset/{{raster_dataset}}/region/africa/periodicity/{{periodicity}}/statistic/{{statistic}}/lat/{{lat}}/lon/{{lon}}/seasons/{{seasons}}/calculation_type/mean",
+			"type": "json"
+		},
+		"overlays": ["africaLstDekadalData",
+		"africaLstMonthlyData",
+		"africaLst2MonthlyData",
+		"africaLst3MonthlyData",
+		"africaLstDekadalAnomaly",
+		"africaLstMonthlyAnomaly",
+		"africaLst2MonthlyData",
+		"africaLst3MonthlyData",
+		"africaLstDekadalZscore",
+		"africaLstMonthlyZscore",
+		"africaLst2MonthlyZscore",
+		"africaLst3MonthlyZscore"],
+		
+		"boundaries": ["africaAdmin1",
+		"africaAdmin2",
+		"africaCropzones","kenyaAdmin3", "kenyaNRTConse","kenyaNRTGB","kenyaKRGB","tanzaniaAdmin3"],
+		
+		"boundaries": ["africaAdmin1",
+		"africaAdmin2",
+		"africaCropzones","kenyaAdmin3", "kenyaNRTConse","kenyaNRTGB","kenyaKRGB","tanzaniaAdmin3"],
+		
+		"boundary_labels": ["Admin 1",
+		"Admin 2",
+		"Crop Zones","Kenya Admin 3", "Kenya NRT Conservancies","Kenya NRT Grazing Blocks","Kenya Rapid Grazing Blocks","Tanzania Admin 3"],
+		
+		"geoengine_boundary_names": ["africa:g2008_1",
+		"africa:g2008_2",
+		"africa:cropzones","africa:kenya_3","africa:kenya_NRT_conse","africa:kenya_NRT_gb","africa:kenya_KR_gb","africa:tanzania_3"],
+		
+		"chart_types": [{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "annual",
+			"data_root": "lst.time_series.values",
+			"y_axis_range": "auto"
+		},
+		{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "interannual",
+			"data_root": "lst.time_series.values",
+			"y_axis_range": "auto"
+		},
+		{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "annual_cumulative",
+			"data_root": "lst.time_series.values",
+			"y_axis_range": "auto"
+		}]
+	},{
+		"source": {
+			"url": "proxies/testProxy.php?url=http://data.rcmrd.org:8910/rest/timeseries/version/3.0/vector_dataset/{{vector_dataset}}/raster_dataset/{{raster_dataset}}/region/africa/periodicity/{{periodicity}}/statistic/{{statistic}}/lat/{{lat}}/lon/{{lon}}/seasons/{{seasons}}/calculation_type/mean",
+			"type": "json"
+		},
+		"overlays": ["sMODISNDVIKenyaDataDekad"],
+		"boundaries": ["africaAdmin1",
+		"africaAdmin2",
+		"africaCropzones","kenyaAdmin3", "kenyaNRTConse","kenyaNRTGB","kenyaKRGB"],
+		
+		"boundary_labels": ["Admin 1",
+		"Admin 2",
+		"Crop Zones","Kenya Admin 3", "Kenya NRT Conservancies","Kenya NRT Grazing Blocks","Kenya Rapid Grazing Blocks"],
+		
+		"geoengine_boundary_names": ["africa:g2008_1",
+		"africa:g2008_2",
+		"africa:cropzones","africa:kenya_3","africa:kenya_NRT_conse","africa:kenya_NRT_gb","africa:kenya_KR_gb"],
+		
+		"chart_types": [{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "annual",
+			"data_root": "sndvi.time_series.values",
+			"y_axis_range": "auto"
+		},
+		{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "interannual",
+			"data_root": "sndvi.time_series.values",
+			"y_axis_range": "auto"
+		},
+		{
+			"graph_types": ["line",
+			"bar"],
+			"data_type": "annual_cumulative",
+			"data_root": "sndvi.time_series.values",
+			"y_axis_range": "auto"
+		}]
+	},{
+        "source": {
+        "url": "https://earlywarning.usgs.gov/fews/ewx/proxies/normalizeDataProxyG4.php?vector_dataset=fewsafrica:g2008_af_1&raster_dataset=fewsemodisc6&region=fewsafrica&periodicity=1-dekad&statistic=data&lat=14.313815336588302&lon=25.42384892704848&seasons=2002%2C2003%2C2004%2C2005%2C2006%2C2007%2C2008%2C2009%2C2010%2C2011%2C2012%2C2013%2C2014%2C2015%2C2016%2C2017%2C2018%2C2019%2C2020&calculation_type=mean&mean-median=true&servlet_endpoint=https://edcintl.cr.usgs.gov/fews_geoengine4",
+        "type": "json",
+		"static_season_names": ["median_2003-2017"]
+        },
+        "overlays": ["africaNdvic6DekadalData"],
+		
+		"boundaries": ["africaAdmin1","africaAdmin2","africaCropzones"],
+		
+		"boundary_labels": ["Admin 1","Admin 2","Crop Zones"],
+		
+		"geoengine_boundary_names": ["africa:g2008_1","africa:g2008_2","africa:cropzones"],
+		
+        "chart_types": [{
+            "graph_types": ["line", "bar"],
+            "data_type": "annual",
+            "data_root": "fewsemodisc6.time_series.values",
+            "y_axis_range": "auto"
+        }, {
+            "graph_types": ["bar", "line"],
+            "data_type": "interannual",
+            "data_root": "fewsemodisc6.time_series.values",
+            "y_axis_range": "auto"
+        }]	
+	},{
+        "source": {
+        "url": "https://earlywarning.usgs.gov/fews/ewx/proxies/normalizeDataProxyG4.php?vector_dataset=fewsafrica:g2008_af_1&raster_dataset=fewsemodisc6&region=fewsafrica&periodicity=1-dekad&statistic=data&lat=14.313815336588302&lon=25.42384892704848&seasons=2002%2C2003%2C2004%2C2005%2C2006%2C2007%2C2008%2C2009%2C2010%2C2011%2C2012%2C2013%2C2014%2C2015%2C2016%2C2017%2C2018%2C2019%2C2020&calculation_type=mean&mean-median=true&servlet_endpoint=https://edcintl.cr.usgs.gov/fews_geoengine4",
+        "type": "json"
+        },
+        "overlays": ["africaNdvic6DekadalAnomaly"], 
+		
+		"boundaries": ["africaAdmin1","africaAdmin2","africaCropzones"],
+		
+		"boundary_labels": ["Admin 1","Admin 2","Crop Zones"],
+		
+		"geoengine_boundary_names": ["africa:g2008_1","africa:g2008_2","africa:cropzones"],
+		
+        "chart_types": [{
+            "graph_types": ["line", "bar"],
+            "data_type": "annual",
+            "data_root": "fewsemodisc6.time_series.values",
+            "y_axis_range": "auto"
+        }, {
+            "graph_types": ["bar", "line"],
+            "data_type": "interannual",
+            "data_root": "fewsemodisc6.time_series.values",
+            "y_axis_range": "auto"
+        }]	
+	},{
+        "source": {
+        "url": "https://earlywarning.usgs.gov/fews/ewx/proxies/normalizeDataProxyG4.php?vector_dataset=fewsafrica:g2008_af_1&raster_dataset=fewsemodisc6&region=fewsafrica&periodicity=1-dekad&statistic=data&lat=14.313815336588302&lon=25.42384892704848&seasons=2002%2C2003%2C2004%2C2005%2C2006%2C2007%2C2008%2C2009%2C2010%2C2011%2C2012%2C2013%2C2014%2C2015%2C2016%2C2017%2C2018%2C2019%2C2020&calculation_type=mean&mean-median=true&servlet_endpoint=https://edcintl.cr.usgs.gov/fews_geoengine4",
+        "type": "json"
+        },
+        "overlays": ["africaNdvic6DekadalPctn"],
+		
+		"boundaries": ["africaAdmin1","africaAdmin2","africaCropzones"],
+		
+		"boundary_labels": ["Admin 1","Admin 2","Crop Zones"],
+		
+		"geoengine_boundary_names": ["africa:g2008_1","africa:g2008_2","africa:cropzones"],
+        "chart_types": [{
+            "graph_types": ["line", "bar"],
+            "data_type": "annual",
+            "data_root": "fewsemodisc6.time_series.values",
+            "y_axis_range": "auto"
+        }, {
+            "graph_types": ["bar", "line"],
+            "data_type": "interannual",
+            "data_root": "fewsemodisc6.time_series.values",
+            "y_axis_range": "auto"
+        }]
+	}]
+}

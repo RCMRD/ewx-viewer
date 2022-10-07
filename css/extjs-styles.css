@@ -1,0 +1,81 @@
+.list {
+    padding-left: 16px;
+    padding-bottom: 10px;
+}
+.list li{
+    list-style: square;
+    padding: 2px;
+}
+
+pre {
+    color: #000;
+    font-size: 11px; 
+}
+
+.x-tab-bar-strip-default-top {
+height: 0;
+}
+.x-tab-bar-body-default-top {
+    padding-bottom: 0;
+}
+.x-tab-bar-default-horizontal {
+    height: 31px;
+}
+
+.nodata {
+    border: 1px dashed #ccc;
+    color: #ccc;
+    font: 40px bold Tahoma,Arial,Verdana;
+    height: 250px;
+    margin: 5px;
+    padding: 80px 0 10px;
+    text-align: center;
+    width: 98%;
+}
+
+.layerInfoIcon {
+	background-image: url(../images/help16x16.png);
+	background-repeat: no-repeat;
+}
+
+.noLayerInfoIcon {
+    background: none;
+	/*background-color: transparent; */
+}
+
+.fa-question-circle.layer-info-btn {
+    border-radius: 16px;
+    font-size: 13px;
+    color: white;
+    background-color: #808080;
+    width: 13px;
+    height: 13px;
+}
+
+.fa-question-circle.layer-info-btn:hover {
+    color: #808080;
+    background-color: white;
+
+}
+
+.layerInfo {
+	width: 250px;
+	padding : 5px;
+	text-align: justify;
+}
+.roundCorners {
+	border-bottom-left-radius:8px; border-bottom-right-radius:8px; padding:2px;
+}
+.padPanel{
+	padding:2px;margin-top:3px;
+}
+
+.thumb-label-0 {
+    margin-top: -18px;
+    margin-left: -20%;
+}
+
+.thumb-label-1 {
+    margin-top: 18px;
+    margin-left: -20%;
+}
