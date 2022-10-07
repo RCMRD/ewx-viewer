@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+      <title>EWX Next Generation Viewer</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+		<link rel="stylesheet" type="text/css" href="lib/ext421/resources/css/ext-all-neptune.css">
+		<link rel="stylesheet" type="text/css" href="css/extjs-styles.css" />
+		<link rel="stylesheet" type="text/css" href="css/amcharts-styles.css" />
+	    <link rel="stylesheet" type="text/css" href="lib/ol3.20.1/ol.css" />
+	    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+	    <!--<link rel="stylesheet" type="text/css" href="css/styles-fallback-157FCC.css" />-->
+
+		<style>
+		.x-grid-row .timeSeriesColumn {  
+			color: #777; 
+			font-size: 12px; 
+		}
+		.chartZoneBtn {
+			color: red; font-size: 5px;
+		}
+
+		</style>
+		<!-- overrides to core  
+		<link rel="stylesheet" type="text/css" href="libs/ext-3.4.0/ux/css/Portal.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		-->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149279490-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-149279490-1');
+		</script>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149390194-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-149390194-1');
+		</script>
+
+
+</head>
+<body>
+
+<div id="initial-loading-mask">
+    <div id="initial-loading-message">
+        <div id="initial-loading-message-text" class="x-mask-msg-text custom-mask-loading"></div>
+    </div>
+</div>
+
+
+<!--can use either of these two options as a polyfill for ie promises>
+<script src="https://cdn.jsdelivr.net/bluebird/3.4.3/bluebird.min.js"></script>
+<script src="lib/node_modules/core-js/client/shim.min.js"></script>
+-->
+<script src="lib/node_modules/core-js/client/shim.min.js"></script>
+
+<!--ie fetch polyfill-->
+<script src="lib/fetch.js"></script>
+
+<!-- remove systemjs when browsers support ES6 -->
+<script src="lib/systemjs/system.js"></script>
+<script>
+	
+	SystemJS.config({
+	  map: {
+	    'plugin-babel': './lib/node_modules/systemjs-plugin-babel/plugin-babel.js',
+	    'systemjs-babel-build': './lib/node_modules/systemjs-plugin-babel/systemjs-babel-browser.js'
+	  },
+	  transpiler: 'plugin-babel'
+	});
+
+	SystemJS.config({
+	  meta: {
+	    '*.js': {
+	      babelOptions: {
+	        stage1: true
+	      }
+	    }
+	  }
+	});
+
+	/*
+	SystemJS.config({
+	  map: {
+	  //D:/inetpub/wwwroot_rh/throwaway3/node_modules/systemjs-plugin-traceur
+		'plugin-traceur': './lib/node_modules/systemjs-plugin-traceur/plugin-traceur.js',
+		//D:/inetpub/wwwroot_rh/throwaway3./node_modules/traceur\bin
+		'traceur': './lib/node_modules/traceur/bin/traceur.js',
+		'traceur-runtime': './lib/node_modules/traceur/bin/traceur-runtime.js'
+	  },
+	  meta: {
+		'traceur': {
+		  format: 'global',
+		  exports: 'traceur',
+		  scriptLoad: false
+		},
+		'traceur-runtime': {
+		  format: 'global',
+		  exports: '$traceurRuntime'
+		}
+	  },
+	  transpiler: 'plugin-traceur',
+	  transpilerRuntime: false
+	});
+	*/
+	
+</script>
+
+<script type="text/javascript" src="lib/ol3.20.1/ol-debug.js"></script>
+<script type="text/javascript" src="lib/proj4js-2.3.15/dist/proj4.js"></script>
+<script type="text/javascript" src="lib/ext421/ext-all.js"></script>
+<script type="text/javascript" src="lib/ext421/ext-theme-neptune.js"></script>
+<script type="text/javascript" src="scripts/customize.js?v=2.0.0"></script>
+
+<script type="text/javascript" src="scripts/periodicity.js?v=2.0.0"></script>
+<script type="text/javascript" src="scripts/mapper.js?v=2.0.0"></script>
+<script type="text/javascript" src="scripts/skin.js?v=2.0.0"></script>
+
+<script type="text/javascript" src="lib/amcharts_3.21.14/amcharts/amcharts.js"></script>
+<script type="text/javascript" src="lib/amcharts_3.21.14/amcharts/serial.js"></script>
+<script type="text/javascript" src="lib/amcharts_3.21.14/amcharts/plugins/export/export.min.js"></script>
+
+</body>
+
+</html> 
+
