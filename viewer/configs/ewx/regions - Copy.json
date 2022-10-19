@@ -1,0 +1,48 @@
+{
+  "regions" : [{
+      "id" : "af",
+      "name" : "africa",
+      "title" : "Africa",
+      "srs" : "EPSG:3857",
+      "iconPath" : "images/regionTool/AfricaRegionIcon.gif",
+      "bbox" : [-2128992.2837949917, -4214602.3067408798, 5858710.218962431, 4615766.178543388],
+      "comments" : "basemap is in 3857 so bbox coords are in same format"
+    }, {
+      "id" : "gb",
+      "name" : "global",
+      "title" : "Global",
+      "srs" : "EPSG:3857",
+      "iconPath" : "images/regionTool/AsiaRegionIcon.gif",
+      "bbox" : [-18047246.778596736, -7248766.195662957, 20818785.99486994, 14376008.201786907],
+      "comments" : "basemap is in 3857 so bbox coords are in same format"
+    }, {
+      "id" : "ea-af",
+      "name" : "eastafrica",
+      "title" : "East Africa Community",
+      "srs" : "EPSG:3857",
+      "iconPath" : "images/regionTool/EastAfricaRegionIcon.gif",
+      "bbox" : [2782987.26983, -1448309.80215, 4886925.64582, 893463.751013],
+      "comments" : "basemap is in 3857 so bbox coords are in same format"
+    }, {
+      "id" : "camcar",
+      "name" : "camcar",
+      "title" : "Central America & Caribbean",
+      "srs" : "EPSG:3857",
+      "iconPath" : "images/regionTool/AsiaRegionIcon.gif",
+      "bbox" : [-10562844, 484721, -7520843, 2654509],
+      "comments" : "basemap is in 3857 so bbox coords are in same format"
+    }, {
+        "id" : "casia",
+        "name" : "casia",
+        "title" : "Central Asia",
+        "srs" : "EPSG:3857",
+        "bbox" : [4965600.185578717, 2591396.374983607, 10076331.398916334, 7549720.096869805]
+    }, {
+        "id" : "me",
+        "name" : "me",
+        "title" : "Middle East",
+        "srs" : "EPSG:3857",
+        "bbox" : [2731558.021419195, 1266133.1392549826, 7202177.770660848, 5391295.907873417]
+    }
+  ]
+}

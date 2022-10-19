@@ -1,0 +1,57 @@
+#initial-loading-mask {
+  background-color: #3f4757;
+}
+
+#initial-loading-message {
+  border-color: #223;
+  border-style: solid;
+  border-width: 1px;
+  padding: 2px;
+  width: 120px;
+  height: 35px;
+  background-color: #ccc;
+  border-radius: 0;
+  display: block;
+  text-align: center;
+}
+
+#initial-loading-message > div {
+  background-color: #3f4757;
+}
+
+#initial-loading-message-text {
+  color: #FFFFFF;
+  border-color: #556;
+  border-width: 1px;
+  border-style: solid;
+}
+
+h1.main, .x-btn-default-toolbar-small .fa, .x-btn-default-toolbar-small .x-btn-inner {
+  color: #FFFFFF;
+}
+
+.x-btn-default-toolbar-small {
+  border-color: transparent;
+}
+
+table.x-form-trigger-wrap {
+  border-color: transparent !important;
+}
+
+.x-btn-default-toolbar-small-menu-active, .x-btn-default-toolbar-small-pressed {
+  border-color: #c86e19;
+  background-color: #db7b1f;
+  background-image: none;
+}
+
+.x-btn-default-toolbar-small-icon {
+  color: #FFFFFF;
+}
+
+.chart-container-body {
+  background-color: #c7c7d1;
+}
+
+.map-text-overlay {
+  background-color: #3f4757;
+}

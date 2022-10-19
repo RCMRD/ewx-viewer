@@ -1,0 +1,94 @@
+/* FALLBACK FOR OLD ENVIRONMENTS AND BROWSERS (IMAGE-BASED) */
+.fa:before{content:"";}
+
+.fa {
+  font-family: sans-serif;
+  color: transparent;
+}
+
+.fa-chevron-left {
+  background: url('../fonts/157FCC/png/chevron-left.png') no-repeat;
+}
+
+.fa-chevron-right {
+  background: url('../fonts/157FCC/png/chevron-right.png') no-repeat;
+}
+
+.fa-calendar {
+  background: url('../fonts/157FCC/png/calendar.png') no-repeat;
+}
+
+.fa-info-circle {
+  background: url('../fonts/157FCC/png/info-circle.png') no-repeat;
+}
+
+.fa-hand-paper-o {
+  background: url('../fonts/157FCC/png/hand-paper-o.png') no-repeat;
+}
+
+.fa-arrows-alt {
+  background: url('../fonts/157FCC/png/arrows-alt.png') no-repeat;
+}
+
+.fa-arrow-circle-o-down {
+  background: url('../fonts/157FCC/png/arrow-circle-o-down.png') no-repeat;
+}
+
+.fa-globe {
+  background: url('../fonts/157FCC/png/globe.png') no-repeat;
+}
+
+.fa-share-alt {
+  background: url('../fonts/157FCC/png/share-alt.png') no-repeat;
+}
+
+.fa-search-plus {
+  background: url('../fonts/157FCC/png/search-plus.png') no-repeat;
+}
+
+.fa-picture-o {
+  background: url('../fonts/157FCC/png/picture-o.png') no-repeat;
+}
+
+.fa-cog {
+  background: url('../fonts/157FCC/png/cog.png') no-repeat;
+}
+
+.fa-list-ul {
+  background: url('../fonts/157FCC/png/list-ul.png') no-repeat;
+}
+
+.fa-plus-circle {
+  background: url('../fonts/157FCC/png/plus-circle.png') no-repeat;
+}
+
+.fa-minus-circle {
+  background: url('../fonts/157FCC/png/minus-circle.png') no-repeat;
+}
+
+.fa-home {
+  background: url('../fonts/157FCC/png/home.png') no-repeat;
+}
+
+.fa-compress{
+  background: url('../fonts/157FCC/png/compress.png') no-repeat;
+}
+
+.fa-expand{
+  background: url('../fonts/157FCC/png/expand.png') no-repeat;
+}
+
+.fa-info{
+  background: url('../fonts/157FCC/png/info.png') no-repeat;
+}
+
+.x-form-date-trigger{
+  background: url('../fonts/157FCC/png/calendar.png') no-repeat;
+  content: ' ';
+  position:relative;
+  top:3px;
+}
+
+.x-form-date-trigger:after{
+  content: '';
+}

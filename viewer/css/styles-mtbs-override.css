@@ -1,0 +1,62 @@
+/* MTBS CSS OVERRIDES */
+.x-border-layout-ct,
+.x-window-header-default-top,
+.x-panel-header-default,
+.x-window-header-default .x-tool-img,
+.x-resizable-handle  {
+	background-color: #008651 !important;
+	border-color: #008651 !important;
+}
+
+/* borders only */
+.x-panel-header-default,
+.x-window-body-default,
+.x-panel-default,
+.x-panel-body-default,
+.x-window-default,
+.x-tab-default-top,
+.x-tab-default-left,
+.x-tab-default-right{
+	border-color: #008651 !important;
+}
+
+/* NO BORDERS OR BACKGROUNDS */
+
+.x-border-layout-ct,
+.x-panel-header.tool-group-panel-header,
+.x-panel.x-toolbar-default.x-box-item{
+	border:none;
+	background-color:#ffffff !important;
+}
+.x-border-layout-ct{
+  background-color:#008651 !important; /*eeeeee*/
+}
+/* ICONS */
+.x-panel-header-default .x-tool-img  {
+	background-color: #008651 !important;
+}
+.x-tool .x-tool-img{
+	opacity:1;
+}
+
+
+/* BUTTONS & TABS */
+.x-tab-default-top{
+	background-color:#da670a !important;
+}
+
+.x-tab-default-active{
+ background-color:#008651 !important;
+}
+.x-tab-default-active .x-tab-inner{
+	color:#ffffff;
+}
+h1.main {
+    height: 40px;
+    line-height: 50px;
+    padding: 0 0 0 50px;
+    margin: 0;
+    font-size: 28px;
+    color: #008651 !important;
+    font-weight: normal;
+}

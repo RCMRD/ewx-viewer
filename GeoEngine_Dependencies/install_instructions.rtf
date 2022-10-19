@@ -1,0 +1,238 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Times New Roman;}{\f1\fnil\fcharset0 Courier New;}{\f2\fnil\fcharset0 Verdana;}{\f3\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue0;\red27\green29\blue31;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+\pard\sl400\slmult0\cf1\ul\b\f0\fs30\lang9 REQUIREMENTS: \par
+\ulnone\b0\i\fs24 (The following software versions are required for GeoEngine)\par
+\i0 *Java JRE, 1.8 or 1.7\par
+*GeoServer, 2.11.0\par
+*MySQL, 5.0 or later\par
+*Python, 2.7 (Installer included)\par
+*PIP, 1.6 or later (Installer included)\par
+*GDAL, 1.11.0 (Installer included)\par
+*Rasterstats, 0.3.3 (Installer included)\par
+*Numpy, 1.8.1 \~(Installer included)\par
+*Shapely, 1.3.2 (Installer included)\par
+*joblib (pip install package)\par
+
+\pard\sl320\slmult0\par
+
+\pard\sl400\slmult0 ------------------------------------------------------------------------------------------------------\par
+\b\fs30 Basic Installation Instructions\par
+\b0\fs24 ------------------------------------------------------------------------------------------------------\par
+\b Using the GeoEngine_Dependencies_pkg.zip\b0  provided, right click and select \lquote Extract All\rquote  to your preferred directory. For the purposes of the rest of these instructions, %GeoEngine_Dependencies% refers to the location you extracted the files to.\par
+
+\pard\sl320\slmult0\ul\par
+
+\pard\sl400\slmult0\b\fs28 Setting an environmental variable:\b0  \par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\ulnone\fs24 Press the Windows key and type \ldblquote run\i\rdblquote\i0  and press \ldblquote enter\rdblquote . \par
+{\pntext\f3\'B7\tab}In the Run dialogue box, enter \ldblquote SystemPropertiesAdvanced\rdblquote .\par
+{\pntext\f3\'B7\tab}Click the \ldblquote Environmental Variables\'85\rdblquote  button. \par
+{\pntext\f3\'B7\tab}Click \ldblquote Edit\rdblquote  to edit an existing variable, click \ldblquote New\rdblquote  to add a new variable.\par
+
+\pard\sl320\slmult0\ul\par
+
+\pard\sl400\slmult0\b\fs28 Python\par
+\ulnone\b0\fs24 Python version 2.7 is required and should be installed in a separate location if another version exists.\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0 Run the installer: %GeoEngine_Dependencies%\\install\\32-bit_installers\\python-2.7.msi\par
+{\pntext\f3\'B7\tab}If python is installed to C: root then set Environmental Variables:\par
+
+\pard\fi720\sl400\slmult0 PYTHON_HOME: \f1\fs22 C:\\Python27\par
+\f0\fs24 Add to PATH:\f1\fs22  %PYTHON_HOME%;%PYTHON_HOME%\\Scripts\\\par
+
+\pard\sl320\slmult0\ul\f0\fs24\par
+
+\pard\sl400\slmult0\b pip\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\ulnone\b0 Open an elevated command prompt (right click and select \ldblquote Run as Administrator\rdblquote ) \par
+{\pntext\f3\'B7\tab}Navigate to the folder containing get-pip.py:        \par
+
+\pard\sl400\slmult0            \f1\fs22  >cd %GeoEngine_Dependencies%\\install\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\f0\fs24 Run get-pip.py in the command prompt:\par
+
+\pard\sl400\slmult0\f1\fs22       >python get-pip.py \par
+
+\pard\sl320\slmult0\ul\f0\fs24\par
+
+\pard\sl400\slmult0\b GDAL\par
+\ulnone\i NOTE: \b0 While the installation of GDAL core is not necessary for EWX to run, it can be a very useful tool for troubleshooting/verifying files such as gdalinfo. \par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\i0 Install GDAL core using the installer provided: \f1\fs22 %GeoEngine_Dependencies%\\install\\gdal-201-1500-core.msi\f0\fs24\par
+{\pntext\f3\'B7\tab}Install Complete version.\par
+{\pntext\f3\'B7\tab}Set the Environmental Variables:\par
+
+\pard\fi720\sl400\slmult0 *Add to \b PATH\b0 : \f1\fs22 C:\\Program Files\\GDAL\par
+\f0\fs24 *\b GDAL_DATA\b0 : \f1\fs22 C:\\Program Files\\GDAL\\gdalplugins \par
+\f0\fs24 *\b GDAL_DRIVER_PATH\b0 : \f1\fs22 C:\\Program Files\\GDAL\\gdal-data \par
+
+\pard\sl320\slmult0\f0\fs24\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0 Check that GDAL is working by opening a command prompt and typing the command:\par
+
+\pard\fi720\sl400\slmult0\f1\fs22 gdalinfo --version\par
+\f0\fs24 If the command returns a version number, you installation is working.\par
+
+\pard\sl320\slmult0\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\b REQUIRED:\b0  Install GDAL python plug-ins: \par
+
+\pard\fi720\sl400\slmult0\f1\fs22 %GeoEngine_Dependencies%\\install\\32-bit\\installers\\GDAL-1.11.0.win32-py2.7.exe\par
+
+\pard\sl320\slmult0\ul\f0\fs24\par
+
+\pard\sl400\slmult0\b\fs28 Numpy\par
+\ulnone\b0\fs24 Install Numpy using the installer in \f1\fs22 %GeoEngine_Dependencies%\\install\\32-bit_installers\\numpy-MKL-1.8.1.win32-py2.7.exe\ul\par
+
+\pard\sl320\slmult0\f0\fs24\par
+
+\pard\sl400\slmult0\b\fs28 Shapely\par
+\ulnone\b0\fs24 Install Shapely using the installer in \f1\fs22 %GeoEngine_Dependencies%\\install\\32-bit_installers\\Shapely-1.3.2.win32-py2.7.exe\ul\par
+\fs24\par
+\b\f0\fs28 Joblib Package\b0\fs24\line\ulnone Install joblib via pip - open a command prompt and enter the command\f1\fs22\line >pip install joblib \line\ul\f0\fs24\par
+\b\fs28 GEOS \par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\ulnone\b0\fs24 Copy the file \par
+
+\pard\sl400\slmult0\f1\fs22      %GeoEngine_Dependencies%\\install\\32-bit_installers\\geos_c.dll\f0\fs24  \par
+            to\par
+\f1\fs22      C:\\Python27\\Lib\\site-packages\\shapely\\DLLs\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\f0\fs24 If geos_c.dll already exists, rename the original and copy over the provided version.\par
+{\pntext\f3\'B7\tab}Set the Environmental Variable:\par
+
+\pard\fi720\sl400\slmult0\b GEOS_LIBRARY_PATH\b0 : \f1\fs22 C:\\Python27\\Lib\\site-packages\\shapely\\DLLs\\geos_c.dll \par
+
+\pard\sl320\slmult0\ul\f0\fs24\par
+
+\pard\sl400\slmult0\b\fs28 Rasterstats\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\ulnone\b0\fs24 Open a command prompt and navigate to \f1\fs22 %GeoEngine_Dependencies%\\install\\32-bit_installers\\\f2\fs24\par
+
+\pard\sl400\slmult0\f0         \f1\fs22     >cd %GeoEngine_Dependencies%_pkg\\install\\32-bit_installers \par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\f0\fs24 Enter the command\par
+
+\pard\sl400\slmult0             \f1\fs22 pip install rasterstats-0.3.3.tar.gz\par
+\b\i\f0\fs24 NOTE: \b0 Using the provided rasterstats tar gives an SSL warning - this is normal.\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\i0 Copy the entire %GeoEngine_Dependencies%\\python folder to a location of your choice (we recommend C:\\EWX\\python_scripts).\par
+{\pntext\f3\'B7\tab}Navigate to C:\\Python27\\Lib\\site-packages\\rasterstats using the Windows file explorer.\par
+{\pntext\f3\'B7\tab}Rename the existing main.py file to main.py-org.\par
+{\pntext\f3\'B7\tab}Copy the main.py provided in the \lquote python_scripts\rquote  folder to the rasterstats directory.\par
+{\pntext\f3\'B7\tab}Test Python setup by opening a command prompt and navigating to where you placed rasterstat_test.py (e.g., C:\\EWX\\python_scripts) and run the command\par
+
+\pard\sl400\slmult0\tab\f1\fs22 python rasterstat_test.py > rasterstat_test_results.txt \par
+
+\pard\fi720\sl400\slmult0\f0\fs24 to verify that it is working.\par
+
+\pard\sl400\slmult0\b\i NOTE:\b0  Use the full path to Python2.7 if you have another version installed.\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\i0 You will receive the following warning:\par
+
+\pard\fi720\sl400\slmult0\i C:\\Python27\\lib\\site-packages\\numpy\\ma\\core.py:3847: UserWarning: Warning: converting a masked element to nan.\par
+ \~warnings.warn("Warning: converting a masked element to nan.")\par
+\i0 This is expected behavior.\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0 Compare the two files: rasterstat_test_results.txt & rasterstat_test_results_compare.txt.\par
+{\pntext\f3\'B7\tab}If they compare well, the Python setup is a success!\par
+
+\pard\sl320\slmult0\ul\par
+
+\pard\sl400\slmult0\b\fs28 Java Runtime Environment\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\ulnone\b0\fs24 Run %GeoEngine_Dependencies%\\install\\jre-8u111-windows-x64.exe\par
+{\pntext\f3\'B7\tab}Set the Environmental Variable:\par
+
+\pard\fi720\sl400\slmult0\b JAVA_HOME\b0 : \f1\fs22 C:\\Program Files\\Java\\jre1.8.0_111\par
+
+\pard\sl320\slmult0\ul\f0\fs24\par
+
+\pard\sl400\slmult0\b\fs28 GeoServer\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\ulnone\b0\fs24 Create a geoserver directory (we recommend C:\\EWX\\geoserver).\par
+{\pntext\f3\'B7\tab}Extract the files in %GeoEngine_Dependencies%\\install\\geoserver-2.11.0-bin.zip to C:\\EWX\\geoserver.\par
+{\pntext\f3\'B7\tab}Copy the contents of %GeoEngine_Dependencies%\\data_dir to C:\\EWX\\geoserver\\geoserver-2.11.0\\data_dir\par
+{\pntext\f3\'B7\tab}Edit the web.xml file located in C:\\EWX\\geoserver\\geoserver-2.11.0\\webapps\\geoserver\\WEB-INF\\\par
+{\pntext\f3\'B7\tab}Set the <param-value> of GEOSERVER_DATA_DIR to the path C:\\EWX\\geoserver\\geoserver-2.11.0\\data_dir \par
+
+\pard\fi720\sl400\slmult0 (the data_dir referenced in step 3).\par
+
+\pard\sl320\slmult0\ul\par
+
+\pard\sl400\slmult0\b\fs28 Tomcat\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\ulnone\b0\fs24 Run the Apache executable to install Apache:\par
+
+\pard\fi720\sl400\slmult0 %GeoEngine_Dependencies%\\install\\apache-tomcat-8.5.8.exe \par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0 We recommend you install tomcat in to the C:\\EWX directory.\par
+{\pntext\f3\'B7\tab}Choose the minimum install and all defaults suggested by installation wizard (except for the install directory - see step 2).\par
+{\pntext\f3\'B7\tab}Allow the installer to start Apache Tomcat (keep the Start Tomcat box checked) after install.\par
+{\pntext\f3\'B7\tab}Make sure port 8080 is open in the Windows Firewall (if the port is not open, go to \cf2 ControlPanel>System Security>Windows Firewall>Advanced Settings>inboundRules>New Rule, choose port, TCP 8080).\cf1\par
+
+\pard\sl320\slmult0\cf2\ul\par
+
+\pard\sl400\slmult0\cf1\b\fs28 GeoServer (Part 2)\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\ulnone\b0\fs24 Copy %GeoEngine_Dependencies%\\geoserver\\geoserver.xml \par
+
+\pard\sl400\slmult0              to \par
+             C:\\EWX\\tomcat\\conf\\Catalina\\localhost\\\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0 If needed, modify the docBase path in geoserver.xml to point to the correct version of GeoServer. For example: C:\\EWX\\geoserver\\geoserver-2.11.0\\webapps\\geoserver\par
+{\pntext\f3\'B7\tab}If tomcat is not running, open a command prompt and navigate to C:\\EWX\\tomcat\\bin\par
+
+\pard\sl400\slmult0\tab\f1\fs22 >cd C:\\EWX\\tomcat\\bin\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\f0\fs24 Enter the command \par
+
+\pard\fi720\sl400\slmult0\f1\fs22 >catalina.bat start \par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\f0\fs24 The output will look something like the example below:\par
+
+\pard\fi720\sl400\slmult0\f1\fs22 C:\\EWX\\tomcat\\bin> catalina.bat start\par
+
+\pard\li960\sl400\slmult0 Using CATALINA_BASE: \~\~"C:\\EWX\\tomcat"\par
+Using CATALINA_HOME: \~\~"C:\\EWX\\tomcat"\par
+Using CATALINA_TMPDIR: "C:\\EWX\\tomcat\\temp"\par
+Using JRE_HOME: \~\~\~\~\~\~\~"C:\\Program Files\\Java\\jre1.8.0_111"\par
+Using CLASSPATH: \~\~\~\~\~\~"C:\\EWX\\tomcat\\bin\\bootstrap.jar;C:\\EWX\\tomcat\\bin\\tomcat-juli.jar"\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\f0\fs24 Leave the resulting window open - tomcat will start up and keep running in this window. \par
+{\pntext\f3\'B7\tab}Open an internet browser and enter the URL {\cf0{\field{\*\fldinst{HYPERLINK http://localhost:8080/geoserver }}{\fldrslt{http://localhost:8080/geoserver\ul0\cf0}}}}\f0\fs24\par
+{\pntext\f3\'B7\tab}Login using the default username/password (admin, geoserver).\par
+{\pntext\f3\'B7\tab}CHANGE THE DEFAULT ADMIN PASSWORD by doing the following:\par
+{\pntext\f3\'B7\tab}On the left hand menu, click Users, Groups, Roles.\par
+{\pntext\f3\'B7\tab}Click the Users tab.\par
+{\pntext\f3\'B7\tab}Click on the admin Username.\par
+{\pntext\f3\'B7\tab}Enter new password.\par
+{\pntext\f3\'B7\tab}Click Save at the bottom of thepage.\par
+
+\pard\sl320\slmult0\ul\par
+
+\pard\sl400\slmult0\b\fs28 MySQL\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\ulnone\b0\fs24 Run the included MySQL install file: %GeoEngine_Dependencies%\\install\\mysql-installer-web-community-5.7.16.0.msi\par
+{\pntext\f3\'B7\tab}Select Server Only, click Next, then click Execute.\par
+{\pntext\f3\'B7\tab}Ready to Configure, Next.\par
+{\pntext\f3\'B7\tab}Choose Server Machine from drop down menu, keep the rest at default values.\par
+{\pntext\f3\'B7\tab}Create root password and add user \ldblquote ewx\rdblquote .\par
+{\pntext\f3\'B7\tab}Keep the next window at default values, as well as the window after that.\par
+{\pntext\f3\'B7\tab}To use mysql in a command prompt, add C:\\Program Files\\MySQL\\MySQL Server 5.7\\bin to the \ldblquote Path\rdblquote  Environmental Variable.\par
+{\pntext\f3\'B7\tab}Open the MySQL command client (or a command prompt), enter root password.\par
+
+\pard\sl400\slmult0     \f1\fs22          >mysql -u root -p\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl400\slmult0\f0\fs24 Enter the commands: \par
+
+\pard\fi720\li720\sl400\slmult0\f1\fs22 mysql> create schema ewx;\par
+mysql> use ewx;\par
+mysql> grant usage on *.* to ewx@localhost identified by 'SET_PASSWORD';\par
+mysql> grant all privileges on ewx.* to ewx@localhost;\par
+mysql> flush privileges;\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl340\slmult0\f0\fs24 Make sure port 3306 is open in the Windows Firewall (if the port is not open, go to \cf2 ControlPanel-->System Security-->Windows Firewall-->Advanced Settings-->inboundRules-->New Rule, choose port, TCP 3306).\cf1\par
+}
+ 

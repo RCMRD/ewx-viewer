@@ -1,0 +1,708 @@
+{
+	"theme": "ExtJSNeptune",
+	"cssFallback": true,
+	"blocks": [{
+		"block": "top",
+		"name": "cHeader",
+        "import": "tools.shared.cHeader.cHeader",
+		"add": true,
+		"width" : "auto",
+		"height" : 65,
+		"cssClass": "",
+        "bodyStyle": "padding: 10px",
+        "collapsible": true,
+		"content": "<div id='header-logo-left'><img src='./images/fewsusgs1.jpg'></div><div id='header-logo-right'><img src='./images/fewsnet.png'></div><h1 class='main'>EWX Next Generation Viewer</h1>",
+		"link": "http://earlywarning.usgs.gov",
+        "toolbar": {
+            "position": "bottom",
+            "add": false,
+            "style": "background-color: white;",
+            "overflowMenu": false,
+            "items": [{
+                "name": "cExternalLinkButtonTool",
+                "add": false,
+                "import": "tools.shared.cExternalLinkButtonTool.cExternalLinkButtonTool",
+                "url": "http://vegdri.cr.usgs.gov",
+                "tooltip": "Monitoring Drought - Home",
+                "icon": "fa-home",
+                "width": 30
+            }, {
+                "name": "cPopupButtonTool",
+                "import": "tools.shared.cPopupButtonTool.cPopupButtonTool",
+                "add":false,
+                "showOnFirstLoad": true,
+                "popupTitle":"Disclaimer",
+                "popupHeight":610,
+                "popupWidth": 600,
+                "popupBody":"<p>The NASA MODIS processing system transitioned from collection 5 (C5) to collection 6 (C6) as of 1 April 2017. Due to this change in data flow, the USGS FEWS NET eMODIS products/data are undergoing a transition beginning with April 2017 composites. We will be using MODIS Aqua C6 data and will only be processing dekadal (10-day) composites (36 per year) as opposed to overlapping 10-day composites, previously updated every 5 days. Additionally, our anomaly products will be compared to a 10-year median (2007-2016). We expect some delays for the first composite of April in Central Asia, but anticipate having products for Africa, Central America, and Hispaniola no later than 14 April. Our C5 history will be maintained for a short period of time beyond when the full time series of C6 data are available. Data and graphics for both collections will be available as separate data sets on our regional product pages (i.e. \"eMODIS NDVI C5\" and \"eMODIS NDVI C6\").  We will populate C6 historical data/graphics as they are produced.  While data will be downloadable for both collections, we advise users <u>not</u> to consider the two collections as a continuous time series.</p><p>We apologize for any inconvenience that this might cause.  Please feel free to email any concerns that you might have (<a href='mailto:mbudde@usgs.gov' target='_blank'>mbudde@usgs.gov</a>).</p>",
+                "tooltip": "Disclaimer",
+                "text":"Disclaimer",
+                "width": 100
+            }]
+        }
+	},
+    {
+        "block": "left",
+		"name": "cTOCDesktopLike",
+        "import": "tools.shared.cTOCDesktopLike.cTOCDesktopLike",
+		"add": false,
+		"width" : 370,
+		"height" : "auto",
+		"title": "TOC",
+        "blocks": [{
+            "block": "top",
+            "name": "cTocContainer",
+            "import": "tools.shared.cTocContainer.cTocContainer",
+            "width": "100%",
+            "height": "auto",
+            "add": true,
+            "blocks": [{
+                "name": "cDefaultToc",
+                "import": "tools.shared.cDefaultToc.cDefaultToc",
+                "add": true,
+                "width": "100%",
+                "height": "auto",
+                "titleLength":20
+            }]
+        }, {
+            "name": "cTransparency",
+            "import": "tools.shared.cTransparency.cTransparency",
+            "add": true,
+            "height": 100,
+            "width": "90%"
+        }],
+        "toolbar": {
+            "position": "top",
+            "overflowMenu": false,
+            "items": [{
+                "name": "cRegionTool",
+                "import": "tools.shared.cRegionTool.cRegionTool",
+                "add": true,
+                "width": 200
+            }]
+        }
+    },
+	{
+		"block": "left",
+		"name": "cToc",
+        "import": "tools.shared.cToc.cToc",
+		"add": true,
+		"width" : 380,
+		"height" : "auto",
+		"title": "TOC",
+        "collapsible": true,
+        "blocks": [{
+            "block": "center",
+            "name": "cTocTabPanel",
+            "import": "tools.shared.cTocTabPanel.cTocTabPanel",
+            "add": true,
+            "blocks": [{
+                "add": true,
+                "title": "Contents",
+                "name": "cTocContentsTab",
+                "import": "tools.shared.cTocContentsTab.cTocContentsTab",
+                "blocks": [{
+                    "block": "center",
+                    "add": true,
+                    "width": "100%",
+                    "height": "50%",
+                    "title": "Dataset",
+                    "name": "cTocContainer",
+                    "import": "tools.shared.cTocContainer.cTocContainer",
+                    "blocks": [{
+                        "block": "center",
+                        "name": "cDatasetToc",
+                        "import": "tools.shared.cDatasetToc.cDatasetToc",
+                        "add": true,
+                        "toolbar": {
+                            "position": "top",
+                            "overflowMenu": false,
+                            "items": [{
+                                "name": "cRegionTool",
+                                "import": "tools.shared.cRegionTool.cRegionTool",
+                                "add": true,
+                                "width": 200
+                            }]
+                        }
+                    }]
+                }, {
+                    "block": "bottom",
+                    "add": true,
+                    "width": "100%",
+                    "height": "50%",
+                    "title": "Layers",
+                    "name": "cTocContainer",
+                    "import": "tools.shared.cTocContainer.cTocContainer",
+                    "blocks": [{
+                        "block": "center",
+                        "name": "cLayersToc",
+                        "import": "tools.shared.cLayersToc.cLayersToc",
+                        "add": true,
+                        "toolbar": {
+                            "position": "top",
+                            "overflowMenu": false,
+                            "items": [{
+                                "name": "cAddWMSLayerTool",
+                                "import": "tools.shared.cAddWMSLayerTool.cAddWMSLayerTool",
+                                "add": true,
+                                "tooltip": "Add WMS Layer"
+                            }, {
+                                "name": "cRemoveWMSLayerTool",
+                                "import": "tools.shared.cRemoveWMSLayerTool.cRemoveWMSLayerTool",
+                                "add": true,
+                                "tooltip": "Remove WMS Layer"
+                            }]
+                        }
+                    }]
+                }]
+            }, {
+                "add": true,
+                "title": "Legend",
+                "name": "cTocLegendTab",
+                "import": "tools.shared.cTocLegendTab.cTocLegendTab"
+            }]
+        }]
+	},
+	{
+		"block": "center",
+		"blocks": [{
+            "block": "relative",
+            "name": "cAddWMSLayerForm",
+            "import": "tools.shared.cAddWMSLayerForm.cAddWMSLayerForm",
+            "add": true,
+            "width": 350,
+            "height": 105,
+            "x": 390,
+            "y": 550,
+            "title": "Add WMS Layers"
+        }, {
+            "block": "relative",
+            "name": "cRemoveWMSLayerForm",
+            "import": "tools.shared.cRemoveWMSLayerForm.cRemoveWMSLayerForm",
+            "add": true,
+            "width": 350,
+            "height": 105,
+            "x": 390,
+            "y": 550,
+            "title": "Remove WMS Layers"
+        }, {
+			"block": "relative",
+			"name": "cMapWindow",
+            "import": "tools.shared.cMapWindow.cMapWindow",
+			"add": true,
+            "width": 580,
+            "height": 650,
+            "x": 410,
+            "y": 90,
+            "collapsible": true,
+			"toolbar": {
+				"position": "top",
+                "overflowMenu": true,
+				"items": [
+				{
+					"name": "cZoomToRegionTool",
+					"title": "",
+					"add": true,
+                    "import": "tools.shared.cZoomToRegionTool.cZoomToRegionTool",
+					"cssClass": "",
+					"tooltip": "Zoom to Region"
+				},
+				{
+					"name": "cPanTool",
+					"title": "",
+					"add": true,
+                    "import": "tools.shared.cPanTool.cPanTool",
+					"cssClass": "",
+					"tooltip": "Pan Tool"
+				},
+				{
+					"name": "cExtentDragBoxTool",
+					"title": "",
+					"add": true,
+                    "import": "tools.shared.cExtentDragBoxTool.cExtentDragBoxTool",
+					"cssClass": "",
+					"tooltip": "Zoom to Extent"
+				}
+				,
+				{
+					"name": "cRevertExtentTool",
+					"title": "",
+					"add": true,
+                    "import": "tools.shared.cRevertExtentTool.cRevertExtentTool",
+					"cssClass": "",
+					"tooltip": "Zoom to Previous"
+				},
+				{
+					"name": "cIdentifyTool",
+					"title": "",
+					"add": true,
+                    "import": "tools.shared.cIdentifyTool.cIdentifyTool",
+					"cssClass": "",
+					"tooltip": "Identify Tool"
+				},
+				{
+					"name": "cGraphTool",
+					"title": "",
+					"add": true,
+                    "import": "tools.shared.cGraphTool.cGraphTool",
+					"cssClass": "",
+                    "pressed": true,
+					"tooltip": "Graph Tool",
+                    "layers": [{
+                        "id": "africaAdmin1",
+                        "featureInfo": [{
+                            "propertyName": "FEWS_ID",
+                            "type": "display"
+                        }]
+                    }, {
+                        "id": "africaAdmin2",
+                        "featureInfo": [{
+                            "propertyName": "FEWS_ID",
+                            "type": "display"
+                        }]
+                    }, {
+                        "id": "africaCropzones",
+                        "featureInfo": [{
+                            "propertyName": "FEWS_ID",
+                            "type": "display"
+                        }]
+                    }, {
+                        "id": "kenyaAdmin3",
+                        "featureInfo": [{
+                            "propertyName": "FEWS_ID",
+                            "type": "display"
+                        }]
+                    },{
+						"id": "kenyaNRTConse",
+                        "featureInfo": [{
+                            "propertyName": "FEWS_ID",
+                            "type": "display"
+                        }]
+					
+					},{
+						"id": "kenyaNRTGB",
+                        "featureInfo": [{
+                            "propertyName": "FEWS_ID",
+                            "type": "display"
+                        }]
+					
+					},{
+						"id": "kenyaKRGB",
+                        "featureInfo": [{
+                            "propertyName": "FEWS_ID",
+                            "type": "display"
+                        }]
+					
+					},{
+                        "id": "tanzaniaAdmin3",
+                        "featureInfo": [{
+                            "propertyName": "FEWS_ID",
+                            "type": "display"
+                        }]
+                    },
+					{
+                        "id": "zambiawards",
+                        "featureInfo": [{
+                            "propertyName": "FEWS_ID",
+                            "type": "display"
+                        }]
+                    },
+					{
+                        "id": "kenyadripconties",
+                        "featureInfo": [{
+                            "propertyName": "FEWS_ID",
+                            "type": "display"
+                        }]
+                    }]
+				},
+                {
+                    "name": "cSpacer",
+                    "import": "tools.shared.cSpacer.cSpacer",
+                    "add": true
+                },
+				{
+					"name": "cDatasetExplorerTool",
+					"title": "",
+					"add": true,
+                    "import": "tools.shared.cDatasetExplorerTool.cDatasetExplorerTool",
+					"cssClass": "",
+					"tooltip": "Select displayed layer"
+				},
+				{
+					"name": "cDatePickerTool",
+					"title": "",
+					"add": true,
+                    "import": "tools.shared.cDatePickerTool.cDatePickerTool",
+					"cssClass": "",
+                    "pickerType": "combobox",
+					"tooltip": "Select Date"
+				},
+				{
+					"name": "cClipNShipBtn",
+					"add": false,
+                    "import": "tools.shared.cClipNShipBtn.cClipNShipBtn",
+					"tooltip": "Open Clip N Ship"
+				},
+				{
+					"name": "cAddMapWindowTool",
+					"title": "",
+					"add": false,
+                    "import": "tools.shared.cAddMapWindowTool.cAddMapWindowTool",
+					"cssClass": "",
+					"tooltip": "New Map Window"
+				},
+                {
+                    "name": "cMapDownloadsTool",
+                    "add": true,
+                    "import": "tools.shared.cMapDownloadsTool.cMapDownloadsTool",
+                    "tooltip": "",
+                    "items": [{
+                        "name": "cMenuLabel",
+                        "import": "tools.shared.cMenuLabel.cMenuLabel",
+                        "label": "Download:"
+                    }, {
+                        "name": "cMapDownloadsMenuItem",
+                        "add": true,
+                        "import": "tools.shared.cMapDownloadsMenuItem.cMapDownloadsMenuItem",
+                        "type": "wcs",
+                        "format": "image/geotiff",
+                        "text": "Geotiff (RAW)"
+                    }, {
+                        "name": "cMapDownloadsMenuItem",
+                        "add": true,
+                        "import": "tools.shared.cMapDownloadsMenuItem.cMapDownloadsMenuItem",
+                        "type": "wms",
+                        "format": "image/geotiff",
+                        "text": "Layers in display (TIFF)"
+                    }, {
+                        "name": "cMapDownloadsMenuItemPNG",
+                        "add": true,
+                        "import": "tools.shared.cMapDownloadsMenuItemPNG.cMapDownloadsMenuItemPNG",
+                        "type": "wms",
+                        "format": "image/png",
+                        "text": "Layers in display (PNG)"
+                    }]
+                },
+                {
+                    "name": "cMapLegendTool",
+                    "add": true,
+                    "import": "tools.shared.cMapLegendTool.cMapLegendTool",
+                    "tooltip": "Toggle map legend",
+                    "pressed": true
+                }
+				]
+			},
+            "blocks":[{
+                "block": "top",
+                "name": "cMapPanel",
+                "import": "tools.shared.cMapPanel.cMapPanel",
+                "add": true,
+                "interactions": [
+                    "pan",
+                    "zoom"
+                ],
+                "blocks": [{
+                    "name": "cMapLegend",
+                    "block": "relative",
+                    "import": "tools.shared.cMapLegend.cMapLegend",
+                    "add": true
+                }]
+            }, {
+                "block": "bottom",
+                "title": "Historical Zonal Statistics Plot",
+                "name": "cMapWindowChartArea",
+                "add": true,
+                "import": "tools.shared.cMapWindowChartArea.cMapWindowChartArea",
+                "collapsible": true,
+                "blocks": [{
+                    "block": "center",
+                    "name": "cTabPanel",
+                    "add": true,
+                    "import": "tools.shared.cTabPanel.cTabPanel",
+                    "blocks": [{
+                        "block": "center",
+                        "name": "cChartContainer",
+                        "import": "tools.shared.cChartContainer.cChartContainer",
+                        "add": "true",
+                        "isDefault": false,
+                        "toolbar": {
+                            "overflowMenu": true,
+                            "items": [{
+                                "name": "cPeriodTypeCombo",
+                                "import": "tools.shared.cPeriodTypeCombo.cPeriodTypeCombo",
+                                "title": "",
+                                "add": true,
+                                "tooltip": "Select Period Type",
+                                "saveSelection": true,
+                                "width": 75
+                            },
+                            {
+                                "name": "cYearsCombo",
+                                "import": "tools.shared.cYearsCombo.cYearsCombo",
+                                "title": "",
+                                "add": true,
+                                "tooltip": "Select Years",
+                                "saveSelection": true,
+                                "showByDefault": {
+                                    "amountSelected": 1,
+                                    "others": []
+                                },
+                                "width": 120
+                            },
+                            {
+                                "name": "cZonesCombo",
+                                "import": "tools.shared.cZonesCombo.cZonesCombo",
+                                "title": "",
+                                "add": true,
+                                "tooltip": "Select Zone",
+                                "saveSelection": true,
+                                "width": 120
+                            },
+                            {
+                                "name": "cChartTypeCombo",
+                                "import": "tools.shared.cChartTypeCombo.cChartTypeCombo",
+                                "title": "",
+                                "add": true,
+                                "tooltip": "Select Chart Type",
+                                "saveSelection": true,
+                                "width": 90
+                            },
+							{
+								"name": "cChartDataTruncate",
+								"import": "tools.shared.cChartDataTruncate.cChartDataTruncate",
+								"add": true,
+								"tooltip": "Set Cumulative Start Date",
+								"text": "Set Start Point"
+							},
+							{
+								"name": "cChartDataTruncateReset",
+								"import": "tools.shared.cChartDataTruncateReset.cChartDataTruncateReset",
+								"add": true,
+								"tooltip": "Reset Cumulative Start Date",
+								"text": "Reset Start Point"
+							},
+                            {
+                                "name": "cSpacer",
+                                "import": "tools.shared.cSpacer.cSpacer",
+                                "add": true
+                            },
+                            {
+                                "name": "cDockChart",
+                                "import": "tools.shared.cDockChart.cDockChart",
+                                "title": "",
+                                "add": true,
+                                "tooltip": "Dock Window",
+                                "saveSelection": true,
+                                "dockedState": "docked"
+                            },
+                            {
+                                "name": "cChartToolsMenu",
+                                "import": "tools.shared.cChartToolsMenu.cChartToolsMenu",
+                                "title": "",
+                                "height": 24,
+                                "width": 45,
+                                "add": true,
+                                "tooltip": "Chart Tools",
+                                "items": [{
+                                    "name": "cMenuLabel",
+                                    "label": "Download:",
+                                    "import": "tools.shared.cMenuLabel.cMenuLabel"
+                                }, {
+                                    "name": "cExportPNG",
+                                    "import": "tools.shared.cExportPNG.cExportPNG",
+                                    "title": "PNG",
+                                    "add": true,
+                                    "cssClass": "",
+                                    "tooltip": "Save chart as PNG"
+                                },
+                                {
+                                    "name": "cExportCSV",
+                                    "import": "tools.shared.cExportCSV.cExportCSV",
+                                    "title": "CSV",
+                                    "add": true,
+                                    "cssClass": "",
+                                    "tooltip": "Export data as CSV"
+                                }]
+                            },
+                            {
+                                "name": "cChartLegend",
+                                "import": "tools.shared.cChartLegend.cChartLegend",
+                                "title": "",
+                                "add": true,
+                                "cssClass": "",
+                                "tooltip": "Show Chart Legend",
+                                "pressed": true,
+                                "legendPosition": "bottom"
+                            }]
+                        }
+                    }]
+                }]
+            }]
+		}, {
+            "block": "relative",
+            "name": "cChartContainer",
+            "import": "tools.shared.cChartContainer.cChartContainer",
+            "isDefault": true,
+            "add" : true,
+            "width": 850,
+            "height": 500,
+            "cssClass": "<should define the top-left position of the chart window>",
+            "toolbar": {
+                "overflowMenu": true,
+                "items": [{
+                    "name": "cPeriodTypeCombo",
+                    "import": "tools.shared.cPeriodTypeCombo.cPeriodTypeCombo",
+                    "title": "",
+                    "add": true,
+                    "tooltip": "Select Period Type",
+                    "saveSelection": true,
+                    "width": 75
+                },
+                {
+                    "name": "cYearsCombo",
+                    "import": "tools.shared.cYearsCombo.cYearsCombo",
+                    "title": "",
+                    "add": true,
+                    "tooltip": "Select Years",
+                    "saveSelection": true,
+                    "showByDefault": {
+                        "amountSelected": 1,
+                        "others": ["stm"]
+                    },
+                    "width": 120
+                },
+                {
+                    "name": "cZonesCombo",
+                    "import": "tools.shared.cZonesCombo.cZonesCombo",
+                    "title": "",
+                    "add": true,
+                    "tooltip": "Select Zone",
+                    "saveSelection": true,
+                    "width": 120
+                },
+                {
+                    "name": "cChartTypeCombo",
+                    "import": "tools.shared.cChartTypeCombo.cChartTypeCombo",
+                    "title": "",
+                    "add": true,
+                    "tooltip": "Select Chart Type",
+                    "saveSelection": true,
+                    "width": 90
+                },
+				{
+					"name": "cChartDataTruncate",
+					"import": "tools.shared.cChartDataTruncate.cChartDataTruncate",
+					"add": true,
+					"tooltip": "Set Cumulative Start Date",
+					"text": "Set Start Point"
+				},
+				{
+					"name": "cChartDataTruncateReset",
+					"import": "tools.shared.cChartDataTruncateReset.cChartDataTruncateReset",
+					"add": true,
+					"tooltip": "Reset Cumulative Start Date",
+					"text": "Reset Start Point"
+				},
+                {
+                    "name": "cSpacer",
+                    "import": "tools.shared.cSpacer.cSpacer",
+                    "add": true
+                },
+                {
+                    "name": "cDockChart",
+                    "import": "tools.shared.cDockChart.cDockChart",
+                    "title": "",
+                    "add": true,
+                    "tooltip": "Dock Window",
+                    "saveSelection": true,
+                    "dockedState": "undocked"
+                },
+                {
+                    "name": "cChartToolsMenu",
+                    "import": "tools.shared.cChartToolsMenu.cChartToolsMenu",
+                    "title": "",
+                    "height": 24,
+                    "width": 45,
+                    "add": true,
+                    "tooltip": "Chart Tools",
+                    "items": [{
+                        "name": "cMenuLabel",
+                        "import": "tools.shared.cMenuLabel.cMenuLabel",
+                        "label": "Download:"
+                    }, {
+                        "name": "cExportPNG",
+                        "import": "tools.shared.cExportPNG.cExportPNG",
+                        "title": "PNG",
+                        "add": true,
+                        "cssClass": "",
+                        "tooltip": "Save chart as PNG"
+                    },
+                    {
+                        "name": "cExportCSV",
+                        "import": "tools.shared.cExportCSV.cExportCSV",
+                        "title": "CSV",
+                        "add": true,
+                        "cssClass": "",
+                        "tooltip": "Export data as CSV"
+                    }]
+                },
+                {
+                    "name": "cChartLegend",
+                    "import": "tools.shared.cChartLegend.cChartLegend",
+                    "title": "",
+                    "add": true,
+                    "cssClass": "",
+                    "tooltip": "Show Chart Legend",
+                    "pressed": true,
+                    "legendPosition": "bottom"
+                }]
+            }
+        }]
+	},
+	{
+		"block": "right",
+		"name": "cTools",
+        "import": "tools.shared.cTools.cTools",
+		"add": true,
+		"width" : 250,
+		"height" : "auto",
+        "collapsible" : true,
+        "collapsed": true,
+        "title": "Tools",
+		"blocks": [{
+			"name": "cClipNShip",
+			"add": false,
+			"collapsible": true,
+			"collapsed": true,
+			"import": "tools.shared.cClipNShip.cClipNShip",
+			"max_extent_area_degrees": 1000
+		}, {
+			"name": "cFeatureInfoPanel",
+            "import": "tools.shared.cFeatureInfoPanel.cFeatureInfoPanel",
+			"add": true,
+			"title": "Feature Info",
+			"height" : 200,
+            "width": "100%",
+            "collapsible" : true,
+            "collapsed": true,
+			"cssClass": ""
+		}, {
+			"name": "cSpatialLocking",
+            "import": "tools.shared.cSpatialLocking.cSpatialLocking",
+			"add": true,
+			"title": "Spatial Locking Tool",
+			"height" : 250,
+            "collapsible" : true,
+			"cssClass": ""
+		}, {
+			"name": "cArrangeWindows",
+            "import": "tools.shared.cArrangeWindows.cArrangeWindows",
+			"add": true,
+			"title": "Arrange Windows Tool",
+			"height" : 250,
+            "collapsible" : true,
+			"cssClass": ""
+		}]
+	}],
+	"host": "data.rcmrd.org"
+}
